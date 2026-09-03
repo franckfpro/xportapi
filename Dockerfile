@@ -8,6 +8,7 @@ ENV UV_LINK_MODE=copy
 WORKDIR /app
 
 COPY pyproject.toml uv.lock ./
+
 RUN uv sync --frozen --no-install-project --no-dev
 
 FROM docker.io/library/python:3.12-slim

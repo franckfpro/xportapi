@@ -1,6 +1,8 @@
+from fastapi import FastAPI
 
-def main():
-    print("application lancée")
+app = FastAPI()
 
-if __name__ == "__main__":
-    main()
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
